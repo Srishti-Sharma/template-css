@@ -1,0 +1,381 @@
+*{
+    margin:0;
+    padding:0;
+}
+#outermost{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    margin: 7px 15px 4px;
+}
+a:link{
+    color:rgb(152, 155, 156);
+}
+a:hover{
+    color:rgb(222, 223, 219);
+}
+a:visited{
+    color:rgb(152, 155, 156);
+}
+#sidebar{    
+    width:220px;
+    color:rgb(101,106,126);
+    /* background-color: blanchedalmond; */
+    background-color: rgb(56, 61, 80);
+    height:100%;
+    float:left;
+    position:fixed;
+    padding-top:15px;
+    justify-content: space-around;
+    font-weight: none;
+    font-size:18px;
+}
+#maincontent{
+    flex:1;
+    width:100%;    
+    display: flex;
+    flex-direction: column;    
+    background-color: rgb(248, 248, 250);
+    float:right;
+}
+#sidebar_heading{
+    font-family: "Roboto,sans-serif";
+    margin: 7% 20% 15%;   
+    font-size:25px;    
+    color: rgb(221, 221, 230);
+    align: center;
+    font-weight: none;
+}
+#sidebar_list{  
+    /* justify-content: space-between; */
+    color:rgb(101,106,126);
+    margin-top:25px;
+    display:flex;
+    flex-direction: column;  
+    height:50px;
+    width: 200px; 
+    margin-left:15px;
+}
+.row{
+    margin-left: 0px;
+    margin-right:19px;
+}
+#navbar{
+    display: flex;
+    flex-flow: row;
+    background-color: rgb(237, 236, 241);
+    height:60px;
+    width:97%;
+}
+#navbar .nav{
+    height:100%;
+}
+.nav {
+    margin: 0px;
+    padding: 0px;
+}
+.nav li{    
+    font-size: 18px;
+    padding:15px 5px;
+    display:inline-block;    
+}
+.nav li:first-child{
+    margin-left: 220px;
+}
+.nav button{
+    font-size: 13px;    
+    background-color: white;
+    padding:5px 7px;
+    border:none;    
+}
+.nav button .btn_text{
+    margin-right:20px;
+    margin-left:0px;
+}
+#navbar .nav-right{
+    margin-left:500px;
+    margin-top: 8px;
+    margin-bottom: 10px;   
+}
+.nav-right li{
+    font-size:18px;
+    padding:5px 5px;
+    display: inline-block;
+}
+
+.nav-right input[type=text]{
+    padding:5px;
+    border:none;
+    border-radius: 2px;
+    flex:1;
+}
+
+.nav-right #firstbtn{
+    height: 25px;
+    padding:6px;
+    border:none;
+}
+.nav-right .searchContainer{
+    display: inline-flex;
+    position: relative;
+    border:hidden;
+    flex:1 1 300 px;
+}
+
+.nav-right #firstbtn i{
+    padding: .25rem;
+}
+.nav-right #firstbtn, .nav-right input[type=text]{
+    display: inline-block;
+    margin:0px;
+
+}
+.nav-right li{
+    margin-left:15px;
+}
+.nav-right li img{
+    width:15px; 
+    height:10px;
+}
+
+
+#maincontent .content{
+    flex:1;
+    margin-top:25px;
+    margin-left: 250px;
+}
+.page-title-box{
+    display: flex;
+    flex-flow: row;
+    
+}
+.content span{
+    color:rgb(105, 102, 102);
+    font-size: 20px;
+}
+.content span p{
+    margin-top:10px;
+    font-size:15px;
+}
+.btn{
+    font-size: 13px;   
+    color:white; 
+    background-color: rgb(79, 87, 202);
+    padding:5px 12px;
+    border:none;  
+    display: inline-block; 
+    margin-right: 50px;
+    float: right;
+    margin-left:800px;
+    border-radius: 8px;
+}
+.page-cards{
+    display:flex;
+    flex-flow: row;
+}
+.card{
+    background-color: rgb(102, 108, 212);
+    /* box-shadow:0 4px 8px 0 rgb(0,0,0,0.2); */
+    width:250px;
+    height: 140px;
+    border-radius: 7px;
+    margin: 30px 20px;
+    color:white;
+}
+.container{
+    margin: 15px;
+    padding: 2px 16px; 
+    display: flex;
+    flex-flow: row;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+.container img{
+    width:30px;
+    height:40px;
+    margin: 8px;
+    position: absolute;
+}
+.container span{
+    flex:1;
+    display: flex;
+    flex-flow: column;
+    width: 20px;
+    height: 30px; 
+    margin:15px ; 
+    margin-top: 3px;
+    margin-bottom: 5px;
+    color: rgb(217, 210, 245);
+    font-size: 13px;
+}
+.card-angle-arrow{
+    float: right;
+}
+.card-footer{
+    margin:10px;
+    color:rgb(198, 205, 214);
+}
+.img-back{
+    width:50px;
+    height: 55px;
+    background-color: rgb(130, 137, 231);
+    position: relative;
+    margin-left:2px;
+}
+
+.table-content{
+   margin:0;    
+}
+.table-content table{
+    width: 700px;
+    padding:17px 18px;
+    margin: 15px 15px;
+    text-align:center;
+    background-color: white;
+    border-collapse: collapse;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+th, td{    
+    padding:12px;
+    border-bottom: 1px solid #ddd;    
+    vertical-align: center;
+    align: left;
+}
+th{
+    font-size: 15px;
+    text-align: left;
+    color: rgb(128, 132, 138);
+}
+td{
+    font-size: 13px;
+    color: rgb(108, 109, 112);
+    text-align: left;
+}
+.table-content{
+    display: flex;
+    flex-flow: row;
+}
+.table-content table img{
+    width:50px;
+    height:60px;
+    border-radius: 100%;
+    margin:2px;
+    padding:2px;
+}
+.id-col{
+    color: rgb(112, 116, 117);
+    font-weight: bold;
+}
+.img-text{
+     font-size: 2px;
+}
+.edit-btn{
+    font-size: 13px;   
+    color:white; 
+    background-color: rgb(79, 87, 202);
+    padding:10px 12px;
+    border:none; 
+    border-radius: 5px; 
+}
+.label{
+    padding:6px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+ .delivered{
+     color: rgb(167, 115, 18);  
+     background-color: rgb(116, 177, 116);
+}
+.pending{
+    background-color: rgb(236, 186, 20);
+}
+.cancel{
+    background-color: rgb(240, 79, 39);
+}
+.chat{
+    margin-left: 5px;
+    margin-right:20px;
+    margin-top:15px;
+    width:360px;
+    height: 570px;
+    background-color: white;
+    overflow-y: scroll;
+}
+.chat table{
+    margin:8px;
+    width:340px;
+    height: 300px;
+}
+/* .person1{
+    float:left;
+}
+.person2{
+    float: right;
+} */
+.chat table img{
+    width:43px;
+    height: 50px;
+}
+/* .chat .msg1, .chat .msg2{
+   display: flex;
+   flex-direction: column;   
+}
+.chat .msg1{
+    align-self: flex-start;
+}
+.chat .msg2{
+    align-self: flex-end;
+} */
+
+.chat table span{
+    font-size: 10px;
+    margin:10px;
+}
+.chat table td{
+    padding: 12px;
+}
+.msg-box1{
+    text-align:left;
+    border-radius: 5px;
+    color:rgb(54, 35, 223);
+    width: 100%;
+    height: 100%;
+    padding:8px;
+    margin:8px;
+    background-color: rgb(224,226,243);
+    
+}
+.msg-box2{
+    text-align:right;
+    border-radius: 5px;
+    color:rgb(99, 96, 96);
+    padding:8px;
+    margin:8px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(248, 248, 250);
+      
+}
+/* .chat tr :nth-child(odd) msg{
+    text-align: left;
+}
+.chat tr :nth-child(odd) msg{
+    text-align: right;
+} */
+
+.chat .name{
+   padding-bottom: 10px;
+}
+
+.chat table caption{
+    margin:15px;
+}
+.msg-box1 b, .msg-box2 b{
+    color:rgb(54, 35, 223);
+    margin-bottom:10px;       
+}
+.chat input[type=text]{
+    width:340px;
+    height: 30px;
+}
