@@ -379,3 +379,20 @@ td{
     width:340px;
     height: 30px;
 }
+.fix-textbox{
+    display: flex;
+    flex-flow: row;
+}
+.fix-textbox input[type=text]{    
+    width:300px;
+    height:30px;
+}
+.fix-textbox button{
+    background-color: rgb(90, 197, 179);
+    color:rgb(5, 5, 5);
+    border:none;
+    width:50px;
+    height:30px;
+    float: right;
+    margin-bottom:8px;
+}
