@@ -4,6 +4,8 @@
 }
 #outermost{
     display: flex;
+    padding-top: 60px;
+    flex-wrap:wrap;
 }
 a{
     text-decoration: none;
@@ -27,13 +29,14 @@ a:hover{
     /* background-color: blanchedalmond; */
     background-color: rgb(56, 61, 80);
     height:100%;
-    float:left;
     position:fixed;
-    padding-top:15px;
+    left:0;
+    top:0;
+    max-width: 20%;
     justify-content: space-around;
     font-weight: none;
-    font-size:18px;
-    
+    font-size:18px;   
+    z-index:110; 
 }
 #maincontent{
     flex:1;
@@ -41,7 +44,6 @@ a:hover{
     display: flex;
     flex-direction: column;    
     background-color: rgb(248, 248, 250);
-    float:right;
 }
 #sidebar_heading{
     font-family: "Roboto,sans-serif";
@@ -70,8 +72,11 @@ a:hover{
     flex-flow: row;
     background-color: rgb(237, 236, 241);
     height:60px;
-    width:97%;
-    /* position: absolut; */
+    position: fixed;
+    left:220px;
+    z-index:120;
+    right:0;
+    top:0;
 }
 #navbar .nav{
     height:100%;
@@ -86,7 +91,7 @@ a:hover{
     display:inline-block;    
 }
 .nav li:first-child{
-    margin-left: 220px;
+    /* margin-left: 220px; */
 }
 .nav button{
     font-size: 13px;    
@@ -106,18 +111,19 @@ a:hover{
     flex-flow:row;
 }
 .nav-right li{
+    margin-top:8px;
     font-size:18px;
     padding:5px 5px;
     display: inline-block;
 }
-
 .nav-right input[type=text]{
     padding:5px;
     border:none;
-    border-radius: 2px;
+    margin-top:8px;
+    border-radius: 15px;
     flex:1;
+    position: relative;
 }
-
 .nav-right #firstbtn{
     height: 25px;
     padding:6px;
@@ -126,13 +132,21 @@ a:hover{
 .nav-right .searchContainer{
     display: inline-flex;
     position: relative;
-    border:hidden;
+    border: hidden;
     flex:1 1 300 px;
 }
-
-.nav-right #firstbtn i{
-    padding: .25rem;
+.badge{
+    border-radius: 20px;
+    width: 15px;
+    height:13px;
+    background-color:rgb(235, 62, 62);
+    position: absolute;
+    top:14;
 }
+
+/* .nav-right #firstbtn i{
+    padding: .25rem;
+} */
 .nav-right #firstbtn, .nav-right input[type=text]{
     display: inline-block;
     margin:0px;
@@ -145,8 +159,6 @@ a:hover{
     width:15px; 
     height:10px;
 }
-
-
 #maincontent .content{
     flex:1;
     margin-top:25px;
@@ -154,10 +166,10 @@ a:hover{
 }
 .page-title-box{
     display: flex;
-    flex-flow: row;
-    
+    flex-flow: row;    
 }
-.content span{
+.content .page-title-box span{
+    top:100;
     color:rgb(105, 102, 102);
     font-size: 20px;
 }
@@ -182,8 +194,7 @@ a:hover{
     flex-flow: row;
     flex-wrap: wrap;
 }
-.card{
-    
+.card{    
     background-color: rgb(102, 108, 212);
     /* box-shadow:0 4px 8px 0 rgb(0,0,0,0.2); */
     width:250px;
@@ -197,13 +208,12 @@ a:hover{
     padding: 2px 16px; 
     display: flex;
     flex-flow: row;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-
+    font-family: "Roboto,sans-serif";
 }
 .container img{
-    width:30px;
+    width:40px;
     height:40px;
-    margin: 8px;
+    margin: 4px;
     position: absolute;
 }
 
@@ -225,21 +235,24 @@ a:hover{
     margin-top: 3px;
     margin-bottom: 5px;
     color: rgb(217, 210, 245);
-    font-size: 13px;
+    font-size: 12px;
 }
 .card-angle-arrow{
     float: right;
+    margin-right:15px;
+    color:white;
 }
 .card-footer{
     margin:10px;
-    color:rgb(198, 205, 214);
+    color:rgb(237, 242, 248);
 }
 .img-back{
-    width:50px;
-    height: 55px;
+    width:55px;
+    height: 55px; 
     background-color: rgb(130, 137, 231);
     position: relative;
-    margin-left:2px;
+    margin-left:0px;
+    
 }
 
 .table-content{
@@ -319,18 +332,37 @@ td{
     height: 570px;
     background-color: white;
     overflow-y: scroll;
+    position: relative;
 }
-.chat table{
-    margin:8px;
-    width:340px;
-    height: 300px;
-}
+
+
+
 /* .person1{
     float:left;
 }
 .person2{
     float: right;
 } */
+
+/* .chat .msg1, .chat .msg2{
+   display: flex;
+   flex-direction: column;   
+}
+.chat .msg1{
+    align-self: flex-start;
+}
+.chat .msg2{
+    align-self: flex-end;
+} */
+
+
+
+.chat table{
+    margin:8px;
+    width:340px;
+    height: 300px;
+}
+
 .chat table img{
     width:43px;
     height: 50px;
@@ -354,6 +386,7 @@ td{
     padding: 12px;
 }
 .msg-box1{
+
     text-align:left;
     border-radius: 5px;
     color:rgb(54, 35, 223);
@@ -361,8 +394,8 @@ td{
     height: 100%;
     padding:8px;
     margin:8px;
-    background-color: rgb(224,226,243);
-    
+    background-color: rgb(224,226,243); 
+    position: relative;   
 }
 .msg-box2{
     text-align:right;
@@ -372,15 +405,8 @@ td{
     margin:8px;
     width: 100%;
     height: 100%;
-    background-color: rgb(248, 248, 250);
-      
+    background-color: rgb(248, 248, 250);      
 }
-/* .chat tr :nth-child(odd) msg{
-    text-align: left;
-}
-.chat tr :nth-child(odd) msg{
-    text-align: right;
-} */
 
 .chat .name{
    padding-bottom: 10px;
@@ -398,8 +424,13 @@ td{
     height: 30px;
 }
 .fix-textbox{
+    widows: 340px;
+    height: 30px;
     display: flex;
     flex-flow: row;
+    flex-wrap:wrap;
+    position: sticky;
+    bottom:0;
 }
 .fix-textbox input[type=text]{    
     width:300px;
@@ -413,4 +444,57 @@ td{
     height:30px;
     float: right;
     margin-bottom:8px;
+}
+.msg-box1::after{
+    width:0px;
+    height:0px;
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent;
+    border-right: 15px solid rgb(12, 11, 10);  
+}
+
+.triangle{ 
+    width:0px;
+    height:0px;
+    border-top:10px solid rgb(224,226,243);
+    border-left:10px solid transparent;
+    border-right: 10px solid transparent; 
+    position: absolute;
+    left:-10px;
+    top: 0px;
+}
+/* .triangle{ 
+    width:0px;
+    height:0px;
+    border-top:10px solid rgb(224,226,243);
+    border-left:10px solid transparent;
+    border-right: 10px solid transparent; 
+    position: absolute;
+    right:-10px;
+    top: 0px;
+} */
+
+
+.rectangle{
+
+    width:70px;
+    height:25px;
+    background: rgb(108, 197, 128);
+    margin-left:30px; 
+    margin-top:-5px;
+    position: relative;
+}
+.tri{
+    z-index:19px;
+    width:0px;
+    height: 0px;
+    border-left: 12px solid rgb(102, 108, 212);;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+.rectangle span{
+    font-size:15px;
+    color:white;
+    position: absolute;
+    top:0;
 }
