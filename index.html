@@ -2,9 +2,21 @@
 
 <head>
     <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <script>
+        $(document).ready(function () {
+            $(".fa-bars").click(function () {
+                $("#outermost").toggleClass("toggle");
+            })
+
+        });
+    </script>
 </head>
 
 <body>
@@ -13,15 +25,25 @@
             <div id="sidebar_heading">GeekyAnts </div>
             <h6 style="margin-left: 12px; color:whitesmoke"> MAIN</h6>
             <ul id="sidebar_list" style="font-color:rgb(173,192,210);">
-                <li><a href="#"><i class="fa fa-fw fa-home row"> </i>Dashboard </a> </li><br>
-                <li><a href="#"> <i class="fa fa-fw fa-calendar row"></i>Calendar</a></li><br>
-                <li><a href="#"> <i class="fa fa-fw fa-envelope row"></i>Email</a> </li> <br>
-                <li><a href="#"> <i class="fa fa-fw fa-cube row"></i>UI Elements</a></li><br>
-                <li><a href="#"> <i class="fa fa-fw fa-wpforms row"></i>Forms</a></li><br>
-                <li><a href="#"> <i class="fa fa-fw fa-pie-chart row"></i>Charts</a></li><br>
-                <li> <a href="#"> <i class="fa fa-fw fa-table row"></i>Table</a></li><br>
-                <li> <a href="#"> <i class="fa fa-fw fa-smile-o row"></i>Icons</a></li><br>
-                <li> <a href="#"> <i class="fa fa-map-marker row"></i>Map</a></li><br>
+                <li style="position:relative;">  <a href="#"  style="display: inline-block" ><i class="fa fa-fw fa-home row "> </i>
+                 <span class="sidelist" >  Dashboard  </span> 
+                 <!-- <span class="sidebar-badge badge"
+               style="background:rgb(55, 101, 230);color:white;width:20px;height:15px;font-size:15px;text-align:center; top:10;right: 0; align:center; position: absolute">3</span> -->
+            </a> </li><br>
+                <li><a href="#"> <i class="fa fa-fw fa-calendar row"></i> <span class="sidelist">Calendar </span>  </a></li><br>
+                <li><a href="#"> <i class="fa fa-fw fa-envelope row"></i> <span class="sidelist">Email </span></a> </li> <br>
+                <li><a href="#"> <i class="fa fa-fw fa-cube row"></i><span class="sidelist">UI Elements</span></a></li><br>
+                <li style="position:relative;" > <a href="#"> <i class="fa fa-fw fa-wpforms row"></i><span class="sidelist">Forms </span></a> 
+                     <!-- <span class="sidebar-badge badge"
+                    style="background:rgb(29, 165, 36);color:white;width:20px;height:15px;font-size:15px;text-align:center;top:5; right: 0; align:center; position: absolute">9</span>  -->
+                </li><br>
+                <li><a href="#"> <i class="fa fa-fw fa-pie-chart row"></i> <span class="sidelist"> Charts </span> </a></li><br>
+                <li> <a href="#"> <i class="fa fa-fw fa-table row"></i> <span class="sidelist"> Table</span></a></li><br>
+                <li> <a href="#"> <i class="fa fa-fw fa-smile-o row"></i><span class="sidelist">Icons </span></a></li><br>
+                <li  style="position:relative;" > <a href="#"> <i class="fa fa-map-marker row"></i><span class="sidelist">Map </span> </a> 
+                     <!-- <span class="sidebar-badge badge"
+                    style="background:rgb(197, 54, 35);color:white;width:20px;height:15px;font-size:15px;text-align:center; top:5 ;right: 5; align:center; position: absolute">2</span>  -->
+                 </li><br>
             </ul>
         </div>
         <div id="maincontent">
@@ -37,7 +59,7 @@
                     </ul>
                     <ul class="nav-right">
                         <li>
-                            <div class="searchContainer">
+                            <div class="searchContainer" style="margin:0% 2%;">
                                 <input type="text" placeholder="   Search..">
                                 <i class="fa fa-search"
                                     style="background-color: white;padding:2px;right: 0;position:absolute; border-radius:15px;"></i>
@@ -61,7 +83,7 @@
                     <span> <b> Dashboard </b> <br>
                         <p>Welcome to GeekyAnts Dashboard</p>
                     </span><br>
-                    <button class="btn" style="float: right;"><i class="fa fa-cog" style="margin:5px 5px;"
+                    <button class="btn" style="margin-right: auto"><i class="fa fa-cog" style="margin:5%;"
                             aria-hidden="true"></i>Settings</button>
                 </div>
                 <div class="page-cards">
@@ -70,13 +92,14 @@
                             <div class="img-back"> <img src="images/01.png"></div>
                             <span> ORDERS <br>
                                 <span style="color: white; font-size:25px; margin-top:5px; "> 1,685
-                                  
-                                    <i class="fas fa-arrow-up" style="color: rgb(98, 185, 137);font-size:16px; padding:8px;"></i>
+
+                                    <i class="fas fa-arrow-up"
+                                        style="color: rgb(98, 185, 137);font-size:16px; padding:8px;"></i>
                                 </span>
 
                                 <div class="rectangle">
-                                        <div class="tri"> <span> +12% </span> </div>
-                                    </div>
+                                    <div class="tri"> <span> +12% </span> </div>
+                                </div>
 
                                 <!-- <i class="fa fa-bookmark fa-2x bookmark"
                                     style="color:rgb(98, 185, 137); margin-top:10px;flex:1; ;margin-left:61px;width:50px ;right:0;"></i> -->
@@ -95,8 +118,8 @@
                                     <i class="fas fa-arrow-down" style="color: red;font-size:16px; padding:8px;"></i>
                                 </span>
                                 <div class="rectangle" style="background-color:rgb(226, 60, 9);margin-left:23px">
-                                        <div class="tri"><span > -28% </span></div>
-                                    </div>
+                                    <div class="tri"><span> -28% </span></div>
+                                </div>
                             </span>
                         </div>
                         <div class="card-footer">Since last month <i class="fas fa-arrow-right card-angle-arrow"></i>
@@ -107,12 +130,15 @@
                     <div class="card">
                         <div class="container">
                             <div class="img-back"> <img src="images/03.png"></div>
-                            <span style="z-index:20"> AVERAGE PRICE <br> <span style="color: white; font-size:25px; margin-top:5px; "> 15.8
-                                    <i class="fas fa-arrow-up" style="color: rgb(98, 185, 137);font-size:16px; padding:8px;"></i>
+                            <span style="z-index:20"> AVERAGE PRICE <br> <span
+                                    style="color: white; font-size:25px; margin-top:5px; "> 15.8
+                                    <i class="fas fa-arrow-up"
+                                        style="color: rgb(98, 185, 137);font-size:16px; padding:8px;"></i>
                                 </span>
-                                <div class="rectangle" style="background-color:rgb(75, 175, 241);margin-left:-15px;z-index:50">
-                                        <div class="tri"><span> 00% </span></div>
-                                    </div>
+                                <div class="rectangle"
+                                    style="background-color:rgb(75, 175, 241);margin-left:-15px;z-index:50">
+                                    <div class="tri"><span> 00% </span></div>
+                                </div>
                             </span>
                         </div>
                         <div class="card-footer">Since last month <i class="fas fa-arrow-right card-angle-arrow"></i>
@@ -124,153 +150,167 @@
                         <div class="container">
                             <div class="img-back"> <img src="images/04.png"></div>
                             <span> PRODUCT SOLD <br> <span style="color: white; font-size:25px; margin-top:5px; "> 2436
-                                    <i class="fas fa-arrow-up" style="color: rgb(98, 185, 137);font-size:16px; padding:8px;"></i>
+                                    <i class="fas fa-arrow-up"
+                                        style="color: rgb(98, 185, 137);font-size:16px; padding:8px;"></i>
                                 </span>
                                 <div class="rectangle" style="background-color:rgb(243, 192, 52);margin-left:-13px"">
-                                        <div class="tri"> <span>+84% </span></div>
-                                    </div>
-                            </span>
+                                        <div class=" tri"> <span>+84% </span></div>
                         </div>
-                        <div class="card-footer">Since last month <i class="fas fa-arrow-right card-angle-arrow"></i>
-                        </div>
-
+                        </span>
                     </div>
+                    <div class="card-footer">Since last month <i class="fas fa-arrow-right card-angle-arrow"></i>
+                    </div>
+
                 </div>
-                <div class="table-content">
-                    <table cellspacing="40px" cellpadding="20px">
+            </div>
+            <div class="table-content">
+                <table cellspacing="40px" cellpadding="20px">
+                    <tr>
+                        <th colspan="7" align="left" style="padding:2px;">Latest Transaction </th>
+                    </tr>
+                    <tr>
+                        <th>(#)Id</th>
+                        <th colspan="2">Name</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="id-col"> #14256</td>
+                        <td><img src="images/facegirl1.jpg"> </td>
+                        <td><span class="img-text" style="font-size: 16"> Philip Smead </span> </td>
+                        <td>15/1/2018</td>
+                        <td>$94</td>
+                        <td> <span class="label delivered" style="color:white;font-size:10px">Delivered </span>
+                        </td>
+
+                        <td> <button class="edit-btn" style="float: right;">Edit</button>
+                        <td>
+                    </tr>
+                    <tr>
+                        <td class="id-col">#14257</td>
+                        <td><img src="images/faceman1.jpg"> </td>
+                        <td><span class="img-text" style="font-size: 16"> Brent Shipley </span> </td>
+                        <td>16/1/2019</td>
+                        <td>$112</td>
+                        <td> <span class="label pending" style="color:white;font-size:10px">Pending </span> </td>
+
+                        <td> <button class="edit-btn" style="float: right;">Edit</button>
+                        <td>
+
+                    </tr>
+                    <tr>
+                        <td class="id-col">#14258</td>
+                        <td><img src="images/faceman2.jpg"></td>
+                        <td> <span class="img-text" style="font-size: 16"> Robert Sitton</span> </td>
+                        <td>17/1/2019</td>
+                        <td>$116</td>
+                        <td> <span class="label delivered" style="color:white;font-size:10px">Delivered</span> </td>
+
+                        <td> <button class="edit-btn" style="float: right;">Edit</button>
+                        <td>
+
+                    </tr>
+                    <tr>
+                        <td class="id-col">#14259</td>
+                        <td><img src="images/facegirl2.jpg"> </td>
+                        <td><span class="img-text" style="font-size: 16"> Alberto Jackson </span> </td>
+                        <td>18/1/2019</td>
+                        <td>$109</td>
+                        <td> <span class="label cancel" style="color:white;font-size:10px"> Cancel</span> </td>
+
+                        <td> <button class="edit-btn" style="float: right;">Edit</button>
+                        <td>
+
+                    </tr>
+                    <tr>
+                        <td class="id-col">#14260</td>
+                        <td><img src="images/faceman3.jpg"></td>
+                        <td><span class="img-text" style="font-size: 16"> David Sanchez</span> </td>
+                        <td>19/1/2019</td>
+                        <td>$120</td>
+                        <td> <span class="label delivered" style="color:white;font-size:10px">Delivered </span>
+                        </td>
+                        <td> <button class="edit-btn" style="float: right;">Edit</button>
+                        <td>
+
+                    </tr>
+                </table>
+                <div class="chat">
+                    <table>
+                        <caption style="float:left"> Chat</caption>
                         <tr>
-                            <th colspan="7" align="left" style="padding:25px;">Latest Transaction </th>
-                        </tr>
-                        <tr>
-                            <th>(#)Id</th>
-                            <th colspan="2">Name</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <td class="id-col"> #14256</td>
-                            <td><img src="images/facegirl1.jpg"> </td>
-                            <td><span class="img-text" style="font-size: 16"> Philip Smead </span> </td>
-                            <td>15/1/2018</td>
-                            <td>$94</td>
-                            <td> <span class="label delivered" style="color:white;font-size:10px">Delivered </span>
+                            <td class="person1"><img src="images/facegirl1.jpg"> <span>10:00</span></td>
+                            <td class="msg1">
+
+                                <div class="msg-box1">
+                                    <div class="triangle"></div><b class="name">Philip Smead</b> <br> Hello My name is
+                                    Katty
+                                    Perry
+                                </div>
                             </td>
-
-                            <td> <button class="edit-btn" style="float: right;">Edit</button>
-                            <td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td class="id-col">#14257</td>
-                            <td><img src="images/faceman1.jpg"> </td>
-                            <td><span class="img-text" style="font-size: 16"> Brent Shipley </span> </td>
-                            <td>16/1/2019</td>
-                            <td>$112</td>
-                            <td> <span class="label pending" style="color:white;font-size:10px">Pending </span> </td>
-
-                            <td> <button class="edit-btn" style="float: right;">Edit</button>
-                            <td>
-
-                        </tr>
-                        <tr>
-                            <td class="id-col">#14258</td>
-                            <td><img src="images/faceman2.jpg"></td>
-                            <td> <span class="img-text" style="font-size: 16"> Robert Sitton</span> </td>
-                            <td>17/1/2019</td>
-                            <td>$116</td>
-                            <td> <span class="label delivered" style="color:white;font-size:10px">Delivered</span> </td>
-
-                            <td> <button class="edit-btn" style="float: right;">Edit</button>
-                            <td>
-
-                        </tr>
-                        <tr>
-                            <td class="id-col">#14259</td>
-                            <td><img src="images/facegirl2.jpg"> </td>
-                            <td><span class="img-text" style="font-size: 16"> Alberto Jackson </span> </td>
-                            <td>18/1/2019</td>
-                            <td>$109</td>
-                            <td> <span class="label cancel" style="color:white;font-size:10px"> Cancel</span> </td>
-
-                            <td> <button class="edit-btn" style="float: right;">Edit</button>
-                            <td>
-
-                        </tr>
-                        <tr>
-                            <td class="id-col">#14260</td>
-                            <td><img src="images/faceman3.jpg"></td>
-                            <td><span class="img-text" style="font-size: 16"> David Sanchez</span> </td>
-                            <td>19/1/2019</td>
-                            <td>$120</td>
-                            <td> <span class="label delivered" style="color:white;font-size:10px">Delivered </span>
+                            <td> </td>
+                            <td class="msg2">
+                                <div class="msg-box2">
+                                    <div class="triangle2"></div> <b class="name"> Robert Sitton</b> <br> Hi! How are
+                                    you? What
+                                    about our
+                                    next meeting?
+                                </div>
                             </td>
-                            <td> <button class="edit-btn" style="float: right;">Edit</button>
-                            <td>
+                            <td class="person2"><img src="images/faceman2.jpg"> <span>10:01</span></td>
+                        </tr>
+                        <tr>
+                            <td class="person1"><img src="images/facegirl1.jpg"> <span>10:04</span></td>
+                            <td class="msg1">
+                                <div class="msg-box1">
+                                    <div class="triangle"></div> <b class="name">Philip Smead</b> <br> Yeah everything
+                                    is fine
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td class="msg2">
+                                <div class="msg-box2">
+                                    <div class="triangle2"></div> <b class="name"> Robert Sitton</b> <br> Wow that's
+                                    great <br>
+                                </div>
+                            </td>
+                            <td class="person2"><img src="images/faceman2.jpg"> <span>10:05</span></td>
+                        </tr>
 
+                        <tr>
+                            <td class="person1"><img src="images/facegirl1.jpg"> <span>10:04</span></td>
+                            <td class="msg1">
+                                <div class="msg-box1">
+                                    <div class="triangle"></div> <b class="name"> Philip Smead</b> <br> I am free
+                                    tomorrow, we
+                                    can plan to meet
+                                </div>
+                            </td>
+                            <td></td>
                         </tr>
                     </table>
-                    <div class="chat">
-                        <table>
-                            <caption style="float:left"> Chat</caption>
-                            <tr>
-                                <td class="person1"><img src="images/facegirl1.jpg"> <span>10:00</span></td>
-                                <td class="msg1">
-                                   
-                                    <div class="msg-box1">  <div class="triangle"></div><b class="name">Philip Smead</b> <br> Hello My name is Katty
-                                        Perry </div>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td class="msg2">
-                                    <div class="msg-box2">  <div class="triangle2"></div> <b class="name"> Robert Sitton</b> <br> Hi! How are you? What
-                                        about our
-                                        next meeting? </div>
-                                </td>
-                                <td class="person2"><img src="images/faceman2.jpg"> <span>10:01</span></td>
-                            </tr>
-                            <tr>
-                                <td class="person1"><img src="images/facegirl1.jpg"> <span>10:04</span></td>
-                                <td class="msg1">
-                                    <div class="msg-box1"> <div class="triangle"></div>  <b class="name">Philip Smead</b> <br> Yeah everything is fine
-                                    </div>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td> </td>
-                                <td class="msg2">
-                                    <div class="msg-box2"> <div class="triangle2"></div> <b class="name"> Robert Sitton</b> <br> Wow that's great <br>
-                                    </div>
-                                </td>
-                                <td class="person2"><img src="images/faceman2.jpg"> <span>10:05</span></td>
-                            </tr>
-
-                            <tr>
-                                <td class="person1"><img src="images/facegirl1.jpg"> <span>10:04</span></td>
-                                <td class="msg1">
-                                    <div class="msg-box1"> <div class="triangle"></div> <b class="name"> Philip Smead</b> <br> I am free tomorrow, we
-                                        can plan to meet
-                                    </div>
-                                </td>
-                                <td></td>
-                            </tr>
-                        </table>
-                        <div class="fix-textbox">
-                            <form> <input type="text" position="absolute" placeholder="   Enter your text"> <button
-                                    type="submit"> Send</button> </form>
-                        </div>
+                    <div class="fix-textbox">
+                        <form> <input type="text" position="absolute" placeholder="   Enter your text"> <button
+                                type="submit"> Send</button> </form>
                     </div>
-
                 </div>
 
             </div>
 
         </div>
+
+    </div>
     </div>
     <div class="triangle"></div>
+
 </body>
 
 </html>
